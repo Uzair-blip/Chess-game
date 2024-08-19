@@ -1,0 +1,29 @@
+  uniquesocket.on("disconnect", () => {
+     console.log("user disconnected");})   //when client disconnect event occur requst go to server   uniquesocket.on("abc", function () {
+//     // This event is received from the client
+//     console.log("Received abc from client");
+//     io.emit("abcd"); // Send to all clients including the sender
+//   });
+Use uniquesocket.emit to send data back to the specific client who sent the event.
+Use socket.broadcast.emit to send data to all other connected clients except the sender.
+Use io.emit to send data to all connected clients, including the sender
+
+
+clientside
+socket.emit("abc"); // Send event to the server
+
+socket.on("abcd", function () {
+  console.log("abcd received from server on front end");
+});// es sy backend ny jo event recieve krny k bad sbko data behjna a wo aye ga
+
+agr koi peice move hora a tu check kro kia wo valid move a
+agr h tu hum us move ko chalwa dyn gy or sary bndon ko dikha dyn gy
+
+
+encapsulation kia hta a ye restrict krta a user lo directly access krny sy data ko integrity ko 
+maitain krny k liye 
+data hiding achieve hti a 
+data modularity achieve hti a 
+abstraction b
+abstract class ka hum object create ni kr skty directly
+abstract class doesnt have implementation derive class uski implementation deti a lazmi
